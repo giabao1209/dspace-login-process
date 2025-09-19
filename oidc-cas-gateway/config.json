@@ -1,0 +1,13 @@
+{
+  "issuerBaseUrl": "http://localhost:3001/oidc",
+  "publicUrl": "http://localhost:3001",
+  "cas": {
+    "baseUrl": "http://localhost:3000/cas",
+    "validatePath": "/serviceValidate"
+  },
+  "dspaceClient": {
+    "id": "dspace",
+    "secret": "a_very_secret_string",
+    "redirectUri": "http://localhost:8081/server/api/authn/oidc"
+  }
+}

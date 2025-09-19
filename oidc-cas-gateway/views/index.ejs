@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OIDC-CAS Gateway Configuration</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OIDC-CAS Gateway Configuration</h1>
+        <p>
+            This interface allows you to configure the gateway.
+            <br>
+            <strong>Important:</strong> The application must be restarted for any changes to take effect.
+        </p>
+
+        <% if (success) { %>
+            <div class="alert success">
+                Configuration saved successfully! Please restart the application.
+            </div>
+        <% } %>
+
+        <form action="/save" method="POST">
+            <h2>Gateway URLs</h2>
+            <div class="form-group">
+                <label for="issuerBaseUrl">Issuer Base URL</label>
+                <input type="text" id="issuerBaseUrl" name="issuerBaseUrl" value="<%= config.issuerBaseUrl %>" required>
+                <small>The base URL of this OIDC provider, e.g., <code>http://localhost:3000/oidc</code></small>
+            </div>
+            <div class="form-group">
+                <label for="publicUrl">Public URL</label>
+                <input type="text" id="publicUrl" name="publicUrl" value="<%= config.publicUrl %>" required>
+                <small>The public-facing URL of this gateway for callbacks, e.g., <code>http://localhost:3000</code></small>
+            </div>
+
+            <h2>CAS Server</h2>
+            <div class="form-group">
+                <label for="casBaseUrl">CAS Base URL</label>
+                <input type="text" id="casBaseUrl" name="casBaseUrl" value="<%= config.cas.baseUrl %>" required>
+                <small>e.g., <code>https://sso.example.edu/cas</code></small>
+            </div>
+            <div class="form-group">
+                <label for="casValidatePath">CAS Validate Path</label>
+                <input type="text" id="casValidatePath" name="casValidatePath" value="<%= config.cas.validatePath %>" required>
+                <small>e.g., <code>/serviceValidate</code> or <code>/p3/serviceValidate</code></small>
+            </div>
+
+            <h2>DSpace OIDC Client</h2>
+            <div class="form-group">
+                <label for="dspaceClientId">Client ID</label>
+                <input type="text" id="dspaceClientId" name="dspaceClientId" value="<%= config.dspaceClient.id %>" required>
+            </div>
+            <div class="form-group">
+                <label for="dspaceClientSecret">Client Secret</label>
+                <div class="input-group">
+                    <input type="password" id="dspaceClientSecret" name="dspaceClientSecret" value="<%= config.dspaceClient.secret %>" required>
+                    <button type="button" id="toggleSecret" class="toggle-button">Show</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dspaceRedirectUri">Redirect URI</label>
+                <input type="text" id="dspaceRedirectUri" name="dspaceRedirectUri" value="<%= config.dspaceClient.redirectUri %>" required>
+                <small>The OIDC callback URL for your DSpace instance.</small>
+            </div>
+
+            <button type="submit">Save Configuration</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleSecret');
+            const secretInput = document.getElementById('dspaceClientSecret');
+            
+            toggleButton.addEventListener('click', function() {
+                if (secretInput.type === 'password') {
+                    secretInput.type = 'text';
+                    toggleButton.textContent = 'Hide';
+                } else {
+                    secretInput.type = 'password';
+                    toggleButton.textContent = 'Show';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
