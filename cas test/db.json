@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "id": "88184d5b-3f79-4658-8115-6c8d240740bf",
+      "id": "el7ddwcq5a",
       "username": "jack",
-      "password": "giabao123",
+      "password": "password",
       "attributes": {
         "roles": "admin",
         "firstName": "Ho",
@@ -12,20 +12,20 @@
       }
     },
     {
-      "id": "8fc2d3b9-933c-4d22-8081-8f5e084d59e6",
+      "id": "9hrilrjewra",
       "username": "jack123",
-      "password": "Jack123",
+      "password": "password",
       "attributes": {
-        "roles": "Siu",
-        "firstName": "Ho",
-        "lastName": "Ho",
-        "email": "hoho@gmail.com"
+        "roles": "default",
+        "firstName": "Jack123",
+        "lastName": "",
+        "email": "jack123@example.com"
       }
     },
     {
-      "id": "ec50039c-2c7b-47ef-8bfd-5132a8661be7",
+      "id": "jpopweywzg",
       "username": "testuser",
-      "password": "testpass",
+      "password": "password",
       "attributes": {
         "roles": "user",
         "firstName": "Test",
@@ -33,110 +33,5 @@
         "email": "test@example.com"
       }
     }
-  ],
-  "Interaction:kqa9YKTBhg42kpa3b7zaMFz-_8S8K4toCZ0BwIa7aIF": {
-    "iat": 1758195248,
-    "exp": 1758197048,
-    "returnTo": "http://localhost:3001/oidc/auth/kqa9YKTBhg42kpa3b7zaMFz-_8S8K4toCZ0BwIa7aIF",
-    "prompt": {
-      "name": "login",
-      "reasons": [
-        "no_session"
-      ],
-      "details": {}
-    },
-    "params": {
-      "client_id": "dspace",
-      "redirect_uri": "http://localhost:8081/server/api/authn/oidc",
-      "response_type": "code",
-      "scope": "openid email profile"
-    },
-    "cid": "-O8JZ_49WBdc4_6_88ZlamlCwtU_SaJs6BnYAlZykhq",
-    "kind": "Interaction",
-    "jti": "kqa9YKTBhg42kpa3b7zaMFz-_8S8K4toCZ0BwIa7aIF"
-  },
-  "Interaction:hBhEXL92zZCPRYyFHEf44YgTUphd3g-LTGqIJZ5kdp5": {
-    "iat": 1758195314,
-    "exp": 1758197114,
-    "returnTo": "http://localhost:3001/oidc/auth/hBhEXL92zZCPRYyFHEf44YgTUphd3g-LTGqIJZ5kdp5",
-    "prompt": {
-      "name": "login",
-      "reasons": [
-        "no_session"
-      ],
-      "details": {}
-    },
-    "params": {
-      "client_id": "dspace",
-      "redirect_uri": "http://localhost:8081/server/api/authn/oidc",
-      "response_type": "code",
-      "scope": "openid email profile"
-    },
-    "cid": "IS3-VuuXx1CDk7_3rRZgc_KFup4MLZSKqziPcJSqyW8",
-    "kind": "Interaction",
-    "jti": "hBhEXL92zZCPRYyFHEf44YgTUphd3g-LTGqIJZ5kdp5"
-  },
-  "Interaction:NWxYcE3guHWODkiCDmHa6pdHL5iNn4JPkW_ZWzlOcBS": {
-    "iat": 1758195591,
-    "exp": 1758197391,
-    "returnTo": "http://localhost:3001/oidc/auth/NWxYcE3guHWODkiCDmHa6pdHL5iNn4JPkW_ZWzlOcBS",
-    "prompt": {
-      "name": "login",
-      "reasons": [
-        "no_session"
-      ],
-      "details": {}
-    },
-    "params": {
-      "client_id": "dspace",
-      "redirect_uri": "http://localhost:8081/server/api/authn/oidc",
-      "response_type": "code",
-      "scope": "openid email profile"
-    },
-    "cid": "G4YSoGl2kZ-OH-aIsnR8aunjDjfuF26bJZQ5Enyhnig",
-    "kind": "Interaction",
-    "jti": "NWxYcE3guHWODkiCDmHa6pdHL5iNn4JPkW_ZWzlOcBS"
-  },
-  "Interaction:lWV9Rdz97jduLSRDKMUE_ooszC9tfMLwyG0hRx6aHZg": {
-    "iat": 1758195742,
-    "exp": 1758197542,
-    "returnTo": "http://localhost:3001/oidc/auth/lWV9Rdz97jduLSRDKMUE_ooszC9tfMLwyG0hRx6aHZg",
-    "prompt": {
-      "name": "login",
-      "reasons": [
-        "no_session"
-      ],
-      "details": {}
-    },
-    "params": {
-      "client_id": "dspace",
-      "redirect_uri": "http://localhost:8081/server/api/authn/oidc",
-      "response_type": "code",
-      "scope": "openid email profile"
-    },
-    "cid": "YitGjk3ojkGr4N3H9dd-v-wMzfArj3ap9dfGcVU8oIC",
-    "kind": "Interaction",
-    "jti": "lWV9Rdz97jduLSRDKMUE_ooszC9tfMLwyG0hRx6aHZg"
-  },
-  "Interaction:Htjb03b9VKBnrgQRkPKn5RHNavMPm2141AQzjq_PRBT": {
-    "iat": 1758195865,
-    "exp": 1758197665,
-    "returnTo": "http://localhost:3001/oidc/auth/Htjb03b9VKBnrgQRkPKn5RHNavMPm2141AQzjq_PRBT",
-    "prompt": {
-      "name": "login",
-      "reasons": [
-        "no_session"
-      ],
-      "details": {}
-    },
-    "params": {
-      "client_id": "dspace",
-      "redirect_uri": "http://localhost:8081/server/api/authn/oidc",
-      "response_type": "code",
-      "scope": "openid email profile"
-    },
-    "cid": "0f-RsS_JnBhMPlOH98dq1g3hVBzE-1WVA8L6-F2meXL",
-    "kind": "Interaction",
-    "jti": "Htjb03b9VKBnrgQRkPKn5RHNavMPm2141AQzjq_PRBT"
-  }
+  ]
 }

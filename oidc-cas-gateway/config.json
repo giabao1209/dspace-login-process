@@ -2,8 +2,8 @@
   "issuerBaseUrl": "http://localhost:3001/oidc",
   "publicUrl": "http://localhost:3001",
   "cas": {
-    "baseUrl": "http://localhost:3000/cas",
-    "validatePath": "/serviceValidate"
+    "baseUrl": "http://localhost:3000",
+    "validatePath": "/cas/serviceValidate"
   },
   "dspaceClient": {
     "id": "dspace",

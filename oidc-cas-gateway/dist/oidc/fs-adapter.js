@@ -26,6 +26,7 @@ const grantable = new Set([
     'BackchannelAuthenticationRequest',
 ]);
 class FileAdapter {
+    model;
     constructor(model) {
         this.model = model;
     }

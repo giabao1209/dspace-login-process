@@ -32,6 +32,8 @@ const grantable = new Set([
 ]);
 
 class FileAdapter {
+  model: string;
+
   constructor(model) {
     this.model = model;
   }

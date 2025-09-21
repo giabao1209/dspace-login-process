@@ -24,6 +24,10 @@ async function main() {
         saveUninitialized: true,
         cookie: { secure: false } // Set to true in production with HTTPS
     }));
+    // --- OIDC Provider ---
+    const provider = createProvider();
+    mountLoginRoutes(app, provider);
+    app.use('/oidc', provider.callback());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static(path.join(__dirname, '../public')));
     // --- UI Configuration Routes ---
@@ -53,10 +57,6 @@ async function main() {
         console.log('Configuration updated. Please restart the application for changes to take effect.');
         res.redirect('/?success=true');
     });
-    // --- OIDC Provider ---
-    const provider = createProvider();
-    mountLoginRoutes(app, provider);
-    app.use('/oidc', provider.callback());
     const port = process.env.PORT || 3000;
     app.listen(port, () => {
         console.log(`OIDC<->CAS Gateway listening on port ${port}`);
